@@ -1,0 +1,54 @@
+{
+  "assessment_id": "demo-cookie-ready-001",
+  "contract": {
+    "id": "demo-recipe-label-v1",
+    "version": "1.0.0",
+    "mode": "demonstration",
+    "assessment_types": ["formulation_consistency", "regulatory_applicability", "technical_readiness"],
+    "scope": {
+      "product_id": "cookie-002",
+      "formulation_id": "cookie-ready-formula",
+      "formulation_version": "1.0.0",
+      "label_id": "cookie-ready-label",
+      "label_version": "1.0.0",
+      "market": "AZ",
+      "evidence_scope": "declared formulation and digital artwork only"
+    },
+    "permitted_claims": ["formulation_consistency", "regulatory_applicability", "technical_readiness"],
+    "required_checks": ["contract_validity", "evidence_integrity", "composition_resolution", "rule_applicability", "declaration_content", "visual_presentation"]
+  },
+  "context": {
+    "jurisdiction": "AZ",
+    "assessment_mode": "prospective",
+    "relevant_times": {"market": "2027-02-05", "assessment": "2026-10-09"},
+    "time_policy_id": "AZ-market-event-v1"
+  },
+  "formulation": {
+    "id": "cookie-ready-formula",
+    "version": "1.0.0",
+    "ingredients": [
+      {"id": "wheat", "name": "buğda unu", "accepted_identity": "wheat flour", "role": "intentional_ingredient"},
+      {"id": "milk", "name": "süd", "accepted_identity": "milk", "role": "intentional_ingredient"},
+      {"id": "tahini", "name": "tahin", "accepted_identity": "tahini", "role": "intentional_ingredient"},
+      {"id": "lecithin", "name": "E322", "accepted_identity": "E322", "verified_origin": "sunflower", "role": "processing_aid"}
+    ],
+    "subrecipes": []
+  },
+  "label": {
+    "id": "cookie-ready-label",
+    "version": "1.0.0",
+    "ingredient_text": "Tərkibi: buğda unu, süd, tahin, günəbaxan lesitini",
+    "declared_allergens": ["cereals_containing_gluten", "milk", "sesame"]
+  },
+  "artwork": {
+    "id": "cookie-ready-artwork",
+    "version": "1.0.0",
+    "visual_evidence_available": true,
+    "emphasized_allergens": ["cereals_containing_gluten", "milk", "sesame"]
+  },
+  "rules": [],
+  "evidence": [],
+  "source_records": [],
+  "knowledge_base_version": "builtin-az-en-1.0.0",
+  "ai_execution": {"mode": "deterministic_alias_normalization", "model_id": null, "prompt_id": null, "schema_id": "ingredient-candidate-1.0.0"}
+}

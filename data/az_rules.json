@@ -1,0 +1,37 @@
+[
+  {
+    "id": "AZ-ALLERGEN-LIST-2027",
+    "version": "1.0.0",
+    "jurisdiction": "AZ",
+    "authority_kind": "binding_law",
+    "source_id": "AZ-EQANUN-62446",
+    "source_url": "https://e-qanun.az/framework/62446#əlavə",
+    "provision": "Allergiya və ya dözümsüzlüyə səbəb olan maddələr və qida məhsullarının siyahısı",
+    "effective_from": "2027-01-01",
+    "effective_to": null,
+    "obligation_id": "allergen_declaration",
+    "relevant_event": "market",
+    "allergens": [
+      "cereals_containing_gluten",
+      "crustaceans",
+      "eggs",
+      "fish",
+      "peanuts",
+      "soybeans",
+      "milk",
+      "tree_nuts",
+      "celery",
+      "mustard",
+      "sesame",
+      "sulphur_dioxide_and_sulphites",
+      "lupin",
+      "molluscs"
+    ],
+    "separate_statement_required": false,
+    "visual_emphasis_required": true,
+    "status": "approved",
+    "interpretation_approved_by": "demo-rule-curator",
+    "activation_scope": "Demonstration of the published 14-category list; exact production interpretation requires designated legal approval."
+  }
+]
+

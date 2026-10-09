@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approved_for_production": {
+      "type": "boolean"
+    },
+    "caveat_flags": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "concept_id": {
+      "type": "string"
+    },
+    "external_ontology_mappings": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "identity_origin_status": {
+      "type": "string"
+    },
+    "knowledge_status": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "material_lot_verified": {
+      "type": "boolean"
+    },
+    "object_type": {
+      "type": "string"
+    },
+    "origin_scope": {
+      "type": "string"
+    },
+    "preferred_name": {
+      "type": "string"
+    },
+    "reference_category_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "reference_source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "regulatory_status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "concept_id",
+    "preferred_name",
+    "language",
+    "object_type",
+    "knowledge_status",
+    "identity_origin_status",
+    "origin_scope",
+    "caveat_flags",
+    "reference_category_ids",
+    "reference_source_ids",
+    "regulatory_status",
+    "external_ontology_mappings",
+    "material_lot_verified",
+    "approved_for_production"
+  ],
+  "title": "BAHAR Ingredient Knowledge Concept v1",
+  "type": "object"
+}

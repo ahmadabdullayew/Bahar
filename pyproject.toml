@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bahar-core"
+version = "2.0.0"
+description = "Evidence-governed recipe-to-label allergen assessment"
+requires-python = ">=3.11"
+dependencies = [
+    "alembic>=1.14,<2",
+    "boto3>=1.35,<2",
+    "cryptography>=44,<47",
+    "jsonschema>=4.23,<5",
+    "PyJWT[crypto]>=2.9,<3",
+    "openpyxl>=3.1,<4",
+    "Pillow>=11,<13",
+    "psycopg[binary,pool]>=3.2,<4",
+    "PyMuPDF>=1.25,<2",
+    "SQLAlchemy>=2.0,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10",
+    "testcontainers[postgres,minio]>=4.9,<5",
+]
+
+[project.scripts]
+bahar = "bahar.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bahar_ai_core = ["resources/ingredient_knowledge_v1/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

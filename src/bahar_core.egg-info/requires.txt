@@ -1,0 +1,14 @@
+alembic<2,>=1.14
+boto3<2,>=1.35
+cryptography<47,>=44
+jsonschema<5,>=4.23
+PyJWT[crypto]<3,>=2.9
+openpyxl<4,>=3.1
+Pillow<13,>=11
+psycopg[binary,pool]<4,>=3.2
+PyMuPDF<2,>=1.25
+SQLAlchemy<3,>=2.0
+
+[dev]
+pytest<10,>=8
+testcontainers[minio,postgres]<5,>=4.9

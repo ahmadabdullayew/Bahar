@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: bahar-core
+Version: 2.0.0
+Summary: Evidence-governed recipe-to-label allergen assessment
+Requires-Python: >=3.11
+Requires-Dist: alembic<2,>=1.14
+Requires-Dist: boto3<2,>=1.35
+Requires-Dist: cryptography<47,>=44
+Requires-Dist: jsonschema<5,>=4.23
+Requires-Dist: PyJWT[crypto]<3,>=2.9
+Requires-Dist: openpyxl<4,>=3.1
+Requires-Dist: Pillow<13,>=11
+Requires-Dist: psycopg[binary,pool]<4,>=3.2
+Requires-Dist: PyMuPDF<2,>=1.25
+Requires-Dist: SQLAlchemy<3,>=2.0
+Provides-Extra: dev
+Requires-Dist: pytest<10,>=8; extra == "dev"
+Requires-Dist: testcontainers[minio,postgres]<5,>=4.9; extra == "dev"

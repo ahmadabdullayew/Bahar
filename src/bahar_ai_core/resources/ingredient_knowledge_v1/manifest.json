@@ -1,0 +1,45 @@
+{
+  "constructed_at_date": "2026-10-09",
+  "counts": {
+    "aliases": 324,
+    "categories": 15,
+    "concepts": 160,
+    "evaluation_cases": 56,
+    "pending_expert_reviews": 160,
+    "regulatory_reference_profiles": 3,
+    "relations": 137,
+    "sources": 9
+  },
+  "dataset_id": "BAHAR_INGREDIENT_KNOWLEDGE",
+  "file_sha256": {
+    "aliases.csv": "8027b640f15198e51fd876377649f1a5781c4dca21274b6e0fc2973dd48f1aa3",
+    "aliases.jsonl": "1c0a377edf0790adddffd311298958051917b818cc5a651a43d2039a8d0e2ef9",
+    "categories.jsonl": "1b2e619b21d48a48290e52696234d39e6fd4db3b280637e596847b129351ae6d",
+    "concept.schema.json": "09dfea48a95b950533cfb86fe8eb4dea738d775d9541c547830938a7dc4e8237",
+    "concepts.csv": "c69ac7bc98e53087b42384e7382261803dc5d3700770cbfaf7fde34d871b3cae",
+    "concepts.jsonl": "c1b3e4d0ae2b65304789e314976ed25e471a344ee067ac298ca433ab7f1d02da",
+    "evaluation_cases.jsonl": "59c142394fc4fd64137054c3f30b619f2b972af46a675aeef3591faa7e2cd134",
+    "ingredient_knowledge.sqlite": "114c0f139a287705d98e9de62f2877ecf1375c867e70e06338421a6feeb0034b",
+    "regulatory_profiles.jsonl": "78b8a7f5467dbda8acf028358fb5394913b5be9cf2b4bc5d4203afc939e3b38c",
+    "relations.jsonl": "f13b54f582c8d5056d028f867bee8f3930d624a25ddcd25e6223d3d4d7b6834d",
+    "review_queue.jsonl": "574407db8fba1dac0f765450fe14aeeec37d68b129c7cf217843ab2fb5d602fa",
+    "sources.jsonl": "59a7771981a0cc2a21b04cb8d19495ecba1e70eabb02b3eb2e9e9ce63d0a5e4a"
+  },
+  "language": "en",
+  "method": "Human-authored structured seed and reference-group documentation; exact-match alias validation; no third-party ground-truth labelling",
+  "review_required": true,
+  "scope": "generic ingredient-name semantic associations; no evidence of finished-product composition, personal clinical safety, quantitative threshold, jurisdictional legal verdict, or material-lot truth",
+  "source_ids": [
+    "SRC-EU-COMM",
+    "SRC-EU-ANNEX",
+    "SRC-US-FDA",
+    "SRC-US-9",
+    "SRC-AZ-AFSA",
+    "SRC-WHO-PAL",
+    "SRC-WHO-2025",
+    "SRC-CODEX-2026",
+    "SRC-EDITORIAL"
+  ],
+  "status": "ENGINEERING_SEED_NOT_DOMAIN_VALIDATED_NOT_LEGAL_RULE_ENGINE",
+  "version": "1.0.0"
+}

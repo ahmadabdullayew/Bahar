@@ -1,0 +1,8 @@
+{
+  "product_id": "synthetic-demo-product-001",
+  "recipe_version": "v2",
+  "recipe_text": "sunflower oil, tahini, water",
+  "label_version": "v1",
+  "label_text": "Ingredients: sunflower oil, water",
+  "evidence_assertions": []
+}

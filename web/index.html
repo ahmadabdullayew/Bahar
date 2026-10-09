@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bahar Operations</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<aside class="sidebar">
+  <div class="brand"><span class="brand-mark">B</span><div><strong>Bahar</strong><small>Evidence operations</small></div></div>
+  <button type="button" id="mobile-nav-toggle" class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">Sections <span aria-hidden="true">☰</span></button>
+  <nav id="primary-navigation" aria-label="Primary">
+    <a class="nav-item active" data-view="overview" href="#/overview"><span>01</span> Overview</a>
+    <a class="nav-item" data-view="ai" href="#/ai"><span>02</span> Bahar audit</a>
+    <a class="nav-item" data-view="supply" href="#/supply"><span>03</span> Supply chain</a>
+    <a class="nav-item" data-view="formulations" href="#/formulations"><span>04</span> Formulations</a>
+    <a class="nav-item" data-view="labels" href="#/labels"><span>05</span> Labels & artwork</a>
+    <a class="nav-item" data-view="batches" href="#/batches"><span>06</span> Manufacturing</a>
+    <a class="nav-item" data-view="inspections" href="#/inspections"><span>07</span> Package inspection</a>
+    <a class="nav-item" data-view="cross-contact" href="#/cross-contact"><span>08</span> Cross-contact</a>
+    <a class="nav-item" data-view="engine" href="#/engine"><span>09</span> Rules engine</a>
+    <a class="nav-item" data-view="evidence" href="#/evidence"><span>10</span> Evidence & corrections</a>
+    <a class="nav-item" data-view="operational" href="#/operational"><span>11</span> Operational safeguards</a>
+    <a class="nav-item" data-view="reviews" href="#/reviews"><span>12</span> Qualified review</a>
+  </nav>
+  <div class="trust-card"><span class="status-dot" id="health-dot" aria-hidden="true"></span><div><strong id="system-state">Connecting</strong><small>Fail-closed evidence boundary</small></div></div>
+</aside>
+<main class="main-shell" id="main-content">
+  <header class="topbar"><div><p class="eyebrow">Local governed workspace</p><h1 id="page-title" tabindex="-1">Operational overview</h1><p class="page-context" id="page-context">Overview / Local evidence workspace</p></div><div class="top-actions"><span class="environment">LOCALHOST</span><button class="icon-button" id="refresh-button" type="button" title="Refresh current view" aria-label="Refresh current view">↻</button></div></header>
+  <section class="panel identity-panel" aria-label="Authentication and organization selection">
+    <strong id="identity-status" role="status">Loading identity configuration…</strong>
+    <div class="identity-actions">
+      <label class="identity-tenant-label">Organization <select id="identity-tenant" aria-label="Select authorized organization" hidden></select></label>
+      <button type="button" id="identity-login" class="primary" hidden>Sign in with organization SSO</button>
+      <button type="button" id="identity-fresh" class="secondary" hidden>Reauthenticate with MFA</button>
+      <button type="button" id="identity-logout" class="secondary" hidden>Sign out</button>
+    </div>
+    <p class="field-help">Production access uses identity-provider OAuth/OIDC access tokens and database memberships. Approval authority never comes from the submitted form.</p>
+  </section>
+  <div id="notice" class="notice hidden" role="status" aria-live="polite"></div>
+  <div id="error-banner" class="error-banner hidden" role="alert" tabindex="-1"><span id="error-message"></span><button type="button" id="dismiss-error" class="secondary">Dismiss</button></div>
+  <div id="activity-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <section class="view active" id="view-overview">
+    <div class="hero"><div><p class="eyebrow">Evidence before conclusion</p><h2>One chain of custody, from supplier lot to printed package.</h2><p>Operational records remain historically pinned. Candidate AI findings never become facts or release decisions by themselves.</p></div><div class="hero-seal"><span>Bahar</span><strong>v0.5</strong><small>Lexical candidate engine · unvalidated</small></div></div>
+    <div class="stat-grid" id="dashboard-stats"></div>
+    <div class="split-grid">
+      <article class="panel"><div class="panel-title"><div><p class="eyebrow">Control posture</p><h3>Non-negotiable boundaries</h3></div></div><div class="boundary-list">
+        <div><span>01</span><p><strong>Historical specifications stay pinned</strong><small>Corrections create impact sets without rewriting receipts.</small></p></div>
+        <div><span>02</span><p><strong>Formula approval is not batch proof</strong><small>Actual materials and packaging reconcile independently.</small></p></div>
+        <div><span>03</span><p><strong>Sample findings remain sample findings</strong><small>Batch inference requires an approved sampling policy.</small></p></div>
+        <div><span>04</span><p><strong>Recipe and cross-contact remain separate</strong><small>Unintended presence requires facility evidence.</small></p></div>
+      </div></article>
+      <article class="panel"><div class="panel-title"><div><p class="eyebrow">Tamper-evident stream</p><h3>Recent operations</h3></div></div><div id="audit-feed" class="audit-feed"><p class="empty">No operational events yet.</p></div></article>
+    </div>
+  </section>
+
+  <section class="view" id="view-ai">
+    <div class="section-intro"><div><p class="eyebrow">User-supplied core · isolated adapter</p><h2>Bahar candidate audit</h2><p>Deterministic lexical extraction and knowledge matching. Output is a proposal, not supplier truth, legal approval, or batch release.</p></div><span class="tag amber" id="ai-mode">loading identity</span></div>
+    <div class="workspace-grid">
+      <form class="panel form-panel" id="ai-form"><div class="panel-title"><h3>Recipe-to-label candidate check</h3></div><div class="field-grid two">
+        <label>Product ID<input name="product_id" required value="product-demo-001"></label><label>Formulation version<input name="formulation_version" required value="1"></label>
+        <label class="wide">Formulation text<textarea name="formulation_text" required>Wheat flour, sunflower oil, sesame, soy lecithin</textarea></label><label>Label version<input name="label_version" required value="1"></label>
+        <label class="wide">Label text<textarea name="label_text" required>Ingredients: wheat flour, sunflower oil, soy lecithin.</textarea></label>
+      </div><button class="primary">Run candidate audit (review only)</button><div class="form-outcome" role="status" aria-live="polite"></div></form>
+      <article class="panel result-panel"><div class="panel-title"><h3>Audit output</h3><span class="tag neutral" id="ai-state">NOT RUN</span></div><div id="ai-summary" class="assessment-summary" aria-label="Assessment summary"><p class="empty">Run an audit to inspect scoped findings and evidence.</p></div><details class="raw-details"><summary>Technical JSON · diagnostic view</summary><pre class="result-json" id="ai-result">No audit has run.</pre></details></article>
+    </div>
+    <form class="panel form-panel" id="compare-form" aria-label="Version change comparison">
+      <div class="panel-title"><div><h3>Recipe version impact · local candidate comparison</h3>
+        <p>Compare source text for the same product. Unknown downstream dependencies are never declared unaffected.</p></div></div>
+      <div class="field-grid two">
+        <label>Product ID<input name="product_id" value="product-demo-001" required></label>
+        <label>Before version<input name="before_version" value="v1" required></label>
+        <label class="wide">Before recipe<textarea name="before_recipe" required>Wheat flour, sunflower oil</textarea></label>
+        <label>After version<input name="after_version" value="v2" required></label>
+        <label class="wide">After recipe<textarea name="after_recipe" required>Wheat flour, sunflower oil, tahini</textarea></label>
+        <label class="wide">Shared label source<textarea name="shared_label" required>Ingredients: wheat flour, sunflower oil</textarea></label>
+      </div>
+      <button type="submit" class="primary">Compare versions</button>
+      <div id="comparison-state" role="status" aria-live="polite"></div>
+      <details class="raw-details"><summary>Version impact JSON</summary><pre id="comparison-result">No comparison has run.</pre></details>
+    </form>
+    <div class="panel lookup-bar"><label>Ingredient knowledge lookup<input id="lookup-input" placeholder="e.g. E322 or soy lecithin"></label><button class="secondary" id="lookup-button">Lookup</button><div id="lookup-summary" class="lookup-summary" aria-live="polite">No lookup performed.</div><details class="raw-details"><summary>Knowledge response JSON</summary><pre id="lookup-result">No lookup performed.</pre></details></div>
+  </section>
+
+  <section class="view" id="view-supply">
+    <div class="section-intro"><div><p class="eyebrow">Immutable material provenance</p><h2>Suppliers, specifications, lots and receipts</h2><p>Declared origin, verified origin, and laboratory findings remain distinct evidence classes.</p></div></div>
+    <div class="card-grid three">
+      <form class="panel compact-form api-form" data-endpoint="/api/suppliers" data-refresh="suppliers"><h3>Register supplier</h3><label>Supplier code<input name="supplier_code" required></label><label>Legal name<input name="legal_name" required></label><button class="primary">Register</button></form>
+      <form class="panel compact-form api-form" data-endpoint="/api/materials" data-refresh="materials"><h3>Register material</h3><label>Material code<input name="material_code" required></label><label>Name<input name="name" required></label><label>Kind<select name="material_kind"><option>ingredient</option><option>processing_aid</option><option>packaging</option><option>rework_carrier</option></select></label><button class="primary">Register</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/supplier-identifiers" data-refresh="supplier-identifiers"><h3>Supplier material identifier</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "supplier_id": "", "material_id": "",
+  "supplier_identifier": "SUPPLIER-SKU-001",
+  "valid_from": "2026-01-01"
+}</textarea></label><button class="primary">Register dated identifier</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/specifications" data-refresh="specifications"><h3>Versioned specification</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "supplier_id": "", "material_id": "",
+  "specification_code": "SPEC-001", "specification_version": "1",
+  "valid_from": "2026-01-01", "declared_origin": {"country": "AZ"}
+}</textarea></label><button class="primary">Create immutable version</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/lots" data-refresh="lots"><h3>Supplier lot</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "supplier_id": "", "material_id": "",
+  "lot_code": "LOT-001", "manufactured_on": "2026-10-01"
+}</textarea></label><button class="primary">Register lot</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/receipts" data-refresh="receipts"><h3>Receipt with pinned spec</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "receipt_code": "RCV-001", "supplier_lot_id": "",
+  "received_at": "2026-10-09T08:00:00Z", "quantity": 100, "unit_code": "kg",
+  "bound_specification_id": "", "specification_binding_reason": "Specification effective for this lot"
+}</textarea></label><button class="primary">Register receipt</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/origin-findings" data-refresh="lots"><h3>Origin finding</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "supplier_lot_id": "", "finding_kind": "laboratory_finding",
+  "origin": {"finding": ""}, "finding_state": "unknown",
+  "observed_at": "2026-10-09T09:00:00Z"
+}</textarea></label><button class="primary">Record separate finding</button></form>
+      <form class="panel compact-form api-form json-form span-two" data-endpoint="/api/supplier-corrections" data-refresh="receipts"><h3>Correction impact without history rewrite</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "specification_id": "", "correction_kind": "clarification",
+  "correction": {"reason": "Supplier clarification"},
+  "effective_at": "2026-10-09T09:00:00Z"
+}</textarea></label><button class="danger">Record correction and find every receipt</button></form>
+    </div><div id="supply-records" class="records-zone"></div>
+  </section>
+
+  <section class="view" id="view-formulations">
+    <div class="section-intro"><div><p class="eyebrow">Pinned dependency graphs</p><h2>Formulations and subrecipes</h2><p>Every subrecipe includes an exact version. Cycles and unit-dimension mismatches fail before persistence.</p></div></div>
+    <div class="workspace-grid"><div class="stack">
+      <form class="panel compact-form api-form" data-endpoint="/api/formulations" data-refresh="formulations"><h3>Formulation identity</h3><label>Code<input name="formulation_code" required></label><label>Name<input name="name" required></label><button class="primary">Register</button></form>
+      <form class="panel compact-form" id="resolve-form"><h3>Resolve exact graph</h3><label>Formulation UUID<input name="formulation_id" required></label><label>Version<input name="version" type="number" min="1" value="1" required></label><button class="secondary">Resolve composition</button></form>
+    </div><form class="panel form-panel api-form json-form" data-endpoint="/api/formulation-versions" data-refresh="formulations"><div class="panel-title"><h3>Add immutable version</h3></div><label>JSON payload<textarea name="payload" class="code-input tall">{
+  "formulation_id": "", "declared_yield": 100, "yield_unit": "kg",
+  "reason": "Initial controlled version", "transformation": {"process": "mixing"},
+  "components": [
+    {"role": "ingredient", "material_id": "", "quantity": 100, "unit_code": "kg"}
+  ]
+}</textarea></label><button class="primary">Validate graph and commit</button></form></div>
+    <pre class="panel result-json standalone-result" id="formulation-result">No graph resolved.</pre><div id="formulation-records" class="records-zone"></div>
+  </section>
+
+  <section class="view" id="view-labels">
+    <div class="section-intro"><div><p class="eyebrow">Text and pixels assessed independently</p><h2>Label text, artwork and custody</h2><p>The exact assessed file is encrypted and digest-bound. Correct source text cannot conceal incorrect artwork.</p></div></div>
+    <div class="card-grid three">
+      <form class="panel compact-form" id="document-form"><h3>Secure document ingestion</h3><label>File<input name="file" type="file" accept=".pdf,.png,.jpg,.jpeg,.tif,.tiff,.webp,.csv,.json,.xlsx,.xls,.ods" required></label><label>Document identity<input name="document_identity" required></label><label>Declared version<input name="version" value="1" required></label><label>Supplier ID (optional)<input name="supplier_id" placeholder="Supplier record ID"></label><div class="field-grid two"><label>Valid from (optional)<input name="valid_from" type="date"></label><label>Valid until (optional)<input name="valid_until" type="date"></label></div><label>Applicable lot IDs (optional, one per line)<textarea name="applicable_lots" rows="2" placeholder="One lot ID per line"></textarea></label><p class="field-help">Maximum through this JSON endpoint: 18 MiB (base64 transport). Acceptance and extraction are separate steps.</p><button class="primary">Scan, preserve and govern</button><div id="document-outcome" class="form-outcome" role="status" aria-live="polite"></div></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/labels" data-refresh="labels"><h3>Label text version</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "label_code": "LBL-001", "version": 1, "language_tag": "az",
+  "ingredient_declaration": "Tərkibi: ...", "allergen_statement": "Allergen: ...",
+  "full_text": "Tərkibi: ... Allergen: ..."
+}</textarea></label><button class="primary">Register text</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/printer-specifications"><h3>Printer specification</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "specification_code": "PRINT-001", "min_x_height_mm": 1.2,
+  "min_contrast_ratio": 4.5, "resolution_dpi": 300,
+  "rules": {"safe_area_required": true}
+}</textarea></label><button class="primary">Register specification</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/artworks" data-refresh="artworks"><h3>Bind exact artwork</h3><label>JSON payload<textarea name="payload" class="code-input tall">{
+  "artwork_code": "ART-001", "version": 1, "label_text_id": "",
+  "artifact_id": "", "artifact_version": 2, "package_size": "500 g",
+  "language_tags": ["az"]
+}</textarea></label><button class="primary">Register artwork</button></form>
+      <form class="panel compact-form api-form json-form span-two" data-endpoint="/api/artwork-assessments" data-refresh="artworks"><h3>Assess rendered regions</h3><label>JSON payload<textarea name="payload" class="code-input tall">{
+  "artwork_id": "", "terminology_state": "indeterminate",
+  "regions": [
+    {"region_kind": "ingredient_declaration", "extracted_text": "Tərkibi: ...", "polygon": [[0,0],[1,0],[1,1],[0,1]], "x_height_mm": 1.3, "contrast_ratio": 5, "placement": {"within_safe_area": true}, "confidence": 0.99},
+    {"region_kind": "allergen_statement", "extracted_text": "Allergen: ...", "polygon": [[0,2],[1,2],[1,3],[0,3]], "x_height_mm": 1.3, "contrast_ratio": 5, "emphasis": {"distinguishable": true}, "placement": {"within_safe_area": true}, "confidence": 0.99}
+  ]
+}</textarea></label><button class="primary">Assess text and pixels</button></form>
+    </div><div id="label-records" class="records-zone"></div>
+  </section>
+
+  <section class="view" id="view-batches">
+    <div class="section-intro"><div><p class="eyebrow">Planned versus actual</p><h2>Manufacturing reconciliation</h2><p>Missing actual-material records are indeterminate. Substitutions and wrong artwork lots fail explicitly.</p></div></div>
+    <div class="card-grid three"><form class="panel compact-form api-form" data-endpoint="/api/lines"><h3>Production line</h3><label>Facility UUID<input name="facility_id" required></label><label>Line code<input name="line_code" required></label><label>Name<input name="name" required></label><button class="primary">Register line</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/equipment" data-refresh="equipment"><h3>Equipment or shared tool</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "line_id": "", "equipment_code": "EQ-001", "name": "Mixer",
+  "shared": true, "allergen_retention_features": {"hard_to_clean": []}
+}</textarea></label><button class="primary">Register equipment</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/packaging-lots"><h3>Packaging lot</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "lot_code": "PKG-001", "artwork_id": "",
+  "received_at": "2026-10-09T08:00:00Z"
+}</textarea></label><button class="primary">Register packaging lot</button></form>
+      <form class="panel form-panel api-form json-form" data-endpoint="/api/batches" data-refresh="batches"><h3>Record batch and reconcile</h3><label>JSON payload<textarea name="payload" class="code-input tall">{
+  "batch_code": "BATCH-001", "facility_id": "", "line_id": "",
+  "formulation_id": "", "formulation_version": 1,
+  "started_at": "2026-10-09T08:00:00Z", "actual_material_record_state": "complete",
+  "state": "completed", "materials": [], "packaging": []
+}</textarea></label><button class="primary">Commit batch evidence</button></form></div><div id="batch-records" class="records-zone"></div>
+  </section>
+
+  <section class="view" id="view-inspections">
+    <div class="section-intro"><div><p class="eyebrow">Qualified capture and bounded inference</p><h2>Physical package inspection</h2><p>Camera qualification, sampling plan, exact image artifact, line, time and batch are mandatory.</p></div></div>
+    <div class="card-grid three">
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/camera-qualifications"><h3>Camera qualification</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "camera_identifier": "CAM-001", "workflow_version": "1",
+  "valid_from": "2026-01-01T00:00:00Z", "valid_until": "2027-01-01T00:00:00Z"
+}</textarea></label><button class="primary">Qualify</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/sampling-plans"><h3>Sampling plan</h3><label>JSON payload<textarea name="payload" class="code-input">{
+  "plan_code": "SAMPLE-001", "plan_version": 1, "sample_size": 3,
+  "inference_scope": "sample_only", "acceptance_policy": {"defects_allowed": 0},
+  "approved": false
+}</textarea></label><button class="primary">Register plan</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/inspections" data-refresh="inspections"><h3>Inspection record</h3><label>JSON payload<textarea name="payload" class="code-input tall">{
+  "sample_code": "SAMPLE-A", "batch_id": "", "packaging_lot_id": "",
+  "camera_qualification_id": "", "sampling_plan_id": "",
+  "source_artifact_id": "", "source_artifact_version": 2, "line_id": "",
+  "captured_at": "2026-10-09T10:00:00Z", "product_identity_state": "matched",
+  "package_identity_state": "matched", "artwork_match_state": "matched",
+  "ocr_state": "passed", "legibility_state": "passed", "emphasis_state": "passed",
+  "result": {"observed": true}, "conclusion_scope": "sample_only"
+}</textarea></label><button class="primary">Record bounded finding</button></form>
+    </div><div id="inspection-records" class="records-zone"></div>
+  </section>
+
+  <section class="view" id="view-cross-contact">
+    <div class="section-intro"><div><p class="eyebrow">Facility-specific reproducibility</p><h2>Cross-contact hazard evidence</h2><p>Previous products, shared assets, cleaning verification, controls and unintended hazards are snapshotted separately from recipe allergens.</p></div></div>
+    <div class="workspace-grid">
+      <form class="panel form-panel api-form json-form" data-endpoint="/api/cleaning-events"><h3>Verified cleaning event</h3><label>JSON payload<textarea name="payload" class="code-input tall">{
+  "line_id": "", "equipment_ids": [], "procedure_version": "CLEAN-1",
+  "started_at": "2026-10-09T06:00:00Z", "completed_at": "2026-10-09T07:00:00Z",
+  "verification_state": "passed", "verification_evidence": {"method": "visual", "record_id": ""}
+}</textarea></label><button class="primary">Record evidence</button></form>
+      <form class="panel form-panel api-form json-form" data-endpoint="/api/cross-contact-assessments" data-refresh="cross-contact"><h3>Reproducible assessment</h3><label>JSON payload<textarea name="payload" class="code-input tall">{
+  "batch_id": "", "previous_batch_id": "", "line_id": "", "cleaning_event_id": "",
+  "recipe_origin_allergens": ["wheat"], "unintended_hazards": ["sesame"],
+  "controls": {"segregation": true, "verified_cleaning": true}
+}</textarea></label><button class="primary">Snapshot and assess</button></form>
+    </div><div id="cross-contact-records" class="records-zone"></div>
+  </section>
+
+  <section class="view" id="view-engine">
+    <div class="section-intro"><div><p class="eyebrow">Versioned contract runner</p><h2>Rules-engine case assessment</h2><p>The deterministic engine remains available for assessment-contract tests and demonstrations.</p></div></div>
+    <div class="toolbar panel"><label>Example<select id="case-select"><option value="unsafe">Blocked example</option><option value="ready">Ready-for-review example</option></select></label><button id="load-case" class="secondary">Load</button><button id="run-case" class="primary">Run assessment</button></div>
+    <div class="workspace-grid"><label class="engine-label">Assessment input JSON<textarea id="case-input" class="panel code-input engine-input" spellcheck="false"></textarea></label><article class="panel result-panel"><h3>Assessment outcome</h3><div id="case-summary" class="assessment-summary"><p class="empty">Load and run a case to inspect execution, check coverage, and review obligations.</p></div><details class="raw-details"><summary>Technical JSON · diagnostic view</summary><pre id="case-result" class="result-json">No assessment has run.</pre></details></article></div>
+  </section>
+  <footer>Technical readiness is not an automatic legal conclusion or release authorization. Assessment conclusions apply only to their defined scope and supporting evidence.</footer>
+  <section class="view" id="view-evidence" hidden>
+    <div class="section-intro"><div><p class="eyebrow">Bounded local demonstration · append-only ledger</p>
+      <h2>Evidence custody and review</h2>
+      <p>Exact source text, scoped assertions, independent qualification, retrieval coverage, and adjudicated corrections. These local controls are not production reviewer authentication or a legal determination.</p></div></div>
+    <div class="card-grid three">
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/evidence/sources"><h3>Retain source version</h3>
+        <label>Payload<textarea class="code-input" name="payload">{"source_id":"supplier-spec","version":"1","text":"Contains sesame.","scope":{"purpose":"supplier_specification"}}</textarea></label>
+        <button class="primary">Store immutable source</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/evidence/assertions"><h3>Propose source-linked claim</h3>
+        <label>Payload<textarea class="code-input" name="payload">{"assertion_id":"sesame-1","source_ref":"evidence-source:supplier-spec:1","start":0,"end":15,"quoted_text":"Contains sesame","proposition":"material_contains_sesame","polarity":"positive","scope":{"material_id":"M1","supplier_id":"S1","material_lot_id":"L1","specification_version":"1"},"reference_kind":"material_lot_claim"}</textarea></label>
+        <button class="primary">Record candidate assertion</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/evidence/reviews"><h3>Adjudicate six dimensions</h3>
+        <label>Payload<textarea class="code-input" name="payload">{"assertion_id":"sesame-1","reason":"Reviewed against retained supplier specification; demonstration only","decisions":{"authenticity":"unknown","integrity":"confirmed","relevance":"confirmed","applicability":"confirmed","substantive_verification":"unknown","approval":"unknown"}}</textarea></label>
+        <button class="primary">Record reviewer judgment</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/evidence/coverage"><h3>Scope retrieval coverage</h3>
+        <label>Payload<textarea class="code-input" name="payload">{"coverage_id":"coverage-1","universe_basis":"Reviewer-defined supplier documents for demonstration","expected_source_refs":["evidence-source:supplier-spec:1"],"retrieved_source_refs":["evidence-source:supplier-spec:1"]}</textarea></label>
+        <button class="primary">Record explicit coverage</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/evidence/bundles"><h3>Pin replay bundle</h3>
+        <label>Payload<textarea class="code-input" name="payload">{"bundle_id":"bundle-1","coverage_ref":"evidence-coverage:coverage-1","assertion_refs":["evidence-assertion:sesame-1"],"context_scope":{"product_id":"product-demo-001","formulation_version":"1"}}</textarea></label>
+        <button class="primary">Bind immutable evidence set</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/evidence/corrections"><h3>Propose exact-region correction</h3>
+        <label>Payload<textarea class="code-input" name="payload">{"correction_id":"correction-1","source_ref":"evidence-source:supplier-spec:1","start":0,"end":8,"observed_text":"Contains","replacement_text":"May contain","reason":"Transcription dispute"}</textarea></label>
+        <button class="primary">Record correction proposal</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/evidence/correction-decisions"><h3>Accept or reject correction</h3>
+        <label>Payload<textarea class="code-input" name="payload">{"correction_ref":"evidence-correction:correction-1","decision":"rejected","reason":"Original source matches the scan"}</textarea></label>
+        <button class="primary">Record review decision</button></form>
+      <form class="panel compact-form api-form json-form" data-endpoint="/api/evidence/derivatives"><h3>Create corrected version</h3>
+        <label>Payload<textarea class="code-input" name="payload">{"source_ref":"evidence-source:supplier-spec:1","correction_refs":["evidence-correction:correction-1"],"derivative_version":"2"}</textarea></label>
+        <button class="primary">Materialize accepted corrections</button></form>
+    </div>
+    <div class="workspace-grid">
+      <form class="panel compact-form" id="evidence-history-form"><h3>Complete source correction history</h3><label>Retained source reference<input name="source_ref" required placeholder="evidence-source:supplier-spec:1"></label><button type="submit" class="secondary">Inspect full ledger</button></form>
+      <form class="panel compact-form" id="evidence-trace-form"><h3>Assessment finding provenance</h3><label>Assessment ID<input name="assessment_id" required></label><button type="submit" class="secondary">Inspect validated references</button></form>
+    </div>
+    <pre class="panel result-json standalone-result" id="evidence-ledger-result" aria-live="polite">Choose a history or provenance inspection.</pre>
+  </section>
+  <section class="view" id="view-operational" hidden>
+    <div class="section-intro"><div><p class="eyebrow">F39–F48 · evidence-limited governance</p>
+      <h2>Operational & regulatory assurance</h2>
+      <p>Preview how Bahar treats legal applicability, cross-contact, external imports, physical packaging,
+      laboratory chain of custody, incident scope, market-package identity, and manufacturing batches.
+      Previews never certify compliance or authorize release.</p></div><span class="tag amber">UNQUALIFIED PREVIEW</span></div>
+    <div class="workspace-grid">
+      <form id="operational-preview-form" class="panel form-panel">
+        <div class="panel-title"><h3>Scope and evidence diagnostic</h3></div>
+        <label>Assessment area<select id="operational-kind" name="kind">
+          <option value="legal_interpretation">Legal applicability & transitions</option>
+          <option value="pal_risk_assessment">Cross-contact quantitative screen</option>
+          <option value="external_connector_receipt">Supplier / ERP / MES / LIMS / packaging receipt</option>
+          <option value="physical_inspection">Physical packaging & camera</option>
+          <option value="lab_sample_custody">Laboratory custody</option>
+          <option value="market_package_configuration">Exact market-package identity</option>
+          <option value="batch_conformity">Actual-batch reconciliation</option>
+        </select></label>
+        <label>Structured evidence for diagnostic only<textarea id="operational-payload" class="code-input" rows="12" spellcheck="false"></textarea></label>
+        <button class="primary" type="submit">Preview uncertainty & safeguards</button>
+        <p class="form-outcome" id="operational-notice" role="status" aria-live="polite"></p>
+      </form>
+      <article class="panel result-panel"><div class="panel-title"><h3>Controlled output</h3><span class="tag amber">NO RELEASE AUTHORITY</span></div>
+        <p>Legal interpretations require legal approval; laboratory and physical statements require independently qualified evidence.
+        A completed form cannot substitute for external measurement, inspection, or authorized review.</p>
+        <pre id="operational-result" class="result-json" aria-live="polite">No operational assessment preview has run.</pre>
+      </article>
+    </div>
+    <article class="panel"><h3>Incident control</h3><p>Reported → triaged → contained → affected-lot analysis → action → verification.
+      Every step requires scoped supporting evidence and an accountable authorized actor. The local demo does not send notices,
+      initiate recalls, or make production decisions.</p></article>
+  </section>
+  <section class="view" id="view-reviews" hidden>
+    <div class="section-intro"><div><p class="eyebrow">Authenticated qualified personnel</p>
+      <h2>Assignment, review and release decisions</h2>
+      <p>Review, regulatory qualification and release are separate. Every action is tenant-scoped, recorded, and checked against a server-side appointment.</p></div></div>
+    <div class="workspace-grid">
+      <form class="panel form-panel review-form" data-required-role="tenant_administrator" data-endpoint="/api/reviews/assign" hidden>
+        <h3>Assign independent reviewer</h3>
+        <label>Assessment ID<input name="assessment_id" required></label>
+        <label>Qualified reviewer<select name="reviewer_id" id="qualified-reviewer-select" required>
+          <option value="">Open this section after signing in as a tenant administrator</option></select></label>
+        <label>Assignment reason<textarea name="reason" required></textarea></label>
+        <button class="primary">Assign qualified reviewer</button></form>
+      <form class="panel form-panel review-form" data-required-role="reviewer" data-endpoint="/api/reviews/decision" hidden>
+        <h3>Independent review</h3><label>Assessment ID<input name="assessment_id" required></label>
+        <label>Review decision<select name="verdict"><option value="accepted_for_review">Accepted for further controls</option>
+        <option value="needs_changes">Needs changes</option><option value="rejected">Rejected</option></select></label>
+        <label>Evidence-based reason<textarea name="reason" required></textarea></label>
+        <button class="primary">Record review decision</button></form>
+      <form class="panel form-panel review-form" data-required-role="regulatory_approver" data-endpoint="/api/reviews/regulatory-decision" hidden>
+        <h3>Regulatory approver · recent MFA required</h3><label>Assessment ID<input name="assessment_id" required></label>
+        <label>Decision<select name="verdict"><option value="approved_for_further_release_checks">Further release checks permitted</option>
+        <option value="rejected">Rejected</option></select></label>
+        <label>Reason<textarea name="reason" required></textarea></label>
+        <button class="primary">Record regulatory decision</button></form>
+      <form class="panel form-panel review-form" data-required-role="release_authority" data-endpoint="/api/releases" hidden>
+        <h3>Final release request · recent MFA required</h3>
+        <label>Release ID<input name="release_id" required></label>
+        <label>Assessment ID<input name="assessment_id" required></label>
+        <label>Reason<textarea name="reason" required></textarea></label>
+        <p class="field-help">Still blocked unless all production evidence, independent decisions, and release prerequisites are verified.</p>
+        <button class="primary">Request governed release</button></form>
+    </div>
+    <form class="panel form-panel" id="review-history-form">
+      <h3>Inspection and immutable history</h3><label>Assessment ID<input name="assessment_id" required></label>
+      <button class="secondary">Read review decisions</button></form>
+    <pre id="review-output" class="result-json" role="status" aria-live="polite">Select an assessment and inspect its review history.</pre>
+  </section>
+</main><script type="module" src="/identity.js"></script><script type="module" src="/app.js"></script>
+</body></html>

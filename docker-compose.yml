@@ -1,0 +1,121 @@
+name: bahar
+
+services:
+  postgres:
+    image: postgres:17.4-alpine
+    environment:
+      POSTGRES_DB: bahar
+      POSTGRES_USER: bahar_migrator
+      POSTGRES_PASSWORD: ${POSTGRES_MIGRATOR_PASSWORD:-migrator-local-only}
+      BAHAR_APP_PASSWORD: ${POSTGRES_APP_PASSWORD:-app-local-only}
+    command:
+      - postgres
+      - -c
+      - wal_level=replica
+      - -c
+      - archive_mode=on
+      - -c
+      - archive_command=test ! -f /wal-archive/%f && cp %p /wal-archive/%f
+      - -c
+      - idle_in_transaction_session_timeout=30000
+      - -c
+      - statement_timeout=120000
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - bahar-postgres:/var/lib/postgresql/data
+      - bahar-wal:/wal-archive
+      - ./deploy/postgres/init-app-role.sh:/docker-entrypoint-initdb.d/10-app-role.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bahar_migrator -d bahar"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  minio:
+    image: motoserver/moto:5.0.9
+    command: ["-H", "0.0.0.0", "-p", "5000"]
+    environment:
+      MOTO_PORT: 5000
+      AWS_DEFAULT_REGION: us-east-1
+    ports:
+      - "127.0.0.1:59000:5000"
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:5000/', timeout=2)\""]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  clamav:
+    # Debian is the official multi-architecture build (amd64/arm64/ppc64le).
+    image: clamav/clamav-debian:1.5.4
+    ports:
+      - "127.0.0.1:53310:3310"
+    environment:
+      # Avoid a second in-process database reload on memory-constrained local
+      # Docker; signature updates are performed as a controlled maintenance job.
+      CLAMAV_NO_FRESHCLAMD: "true"
+    volumes:
+      - bahar-clamav:/var/lib/clamav
+    healthcheck:
+      test: ["CMD-SHELL", "printf 'PING\n' | nc 127.0.0.1 3310 | grep PONG"]
+      interval: 15s
+      timeout: 10s
+      retries: 40
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: deploy/app/Dockerfile
+    environment:
+      BAHAR_DATABASE_URL: postgresql+psycopg://bahar_app:${POSTGRES_APP_PASSWORD:-app-local-only}@postgres:5432/bahar
+      BAHAR_DATABASE_ADMIN_URL: postgresql+psycopg://bahar_migrator:${POSTGRES_MIGRATOR_PASSWORD:-migrator-local-only}@postgres:5432/bahar
+      BAHAR_ORGANIZATION_ID: 00000000-0000-4000-8000-000000000001
+      BAHAR_PRINCIPAL_ID: 00000000-0000-4000-8000-000000000001
+      BAHAR_OBJECT_ENDPOINT: http://minio:5000
+      BAHAR_OBJECT_ACCESS_KEY: ${LOCALSTACK_ACCESS_KEY:-bahar}
+      BAHAR_OBJECT_SECRET_KEY: ${LOCALSTACK_SECRET_KEY:-localstack-change-me}
+      BAHAR_OBJECT_KMS_KEY_ID: local-minio-sse
+      BAHAR_OBJECT_ENCRYPTION_MODE: client-aesgcm
+      BAHAR_OBJECT_CLIENT_KEY: ${BAHAR_OBJECT_CLIENT_KEY:-local-object-encryption-key-change-this}
+      BAHAR_CLAMD_HOST: clamav
+      BAHAR_CLAMD_PORT: 3310
+      BAHAR_AUDIT_HMAC_KEY: ${BAHAR_AUDIT_HMAC_KEY:-local-development-key-must-be-replaced}
+      # Container binds to 0.0.0.0 internally; Docker publishes ONLY 127.0.0.1 on host.
+      # A trusted HTTPS reverse proxy must front this port for SSO browsers.
+      BAHAR_ALLOW_CONTAINER_BIND: "1"
+      BAHAR_OIDC_ISSUER: ${BAHAR_OIDC_ISSUER:?Set production OIDC issuer}
+      BAHAR_OIDC_AUDIENCE: ${BAHAR_OIDC_AUDIENCE:?Set API audience}
+      BAHAR_OIDC_JWKS_URL: ${BAHAR_OIDC_JWKS_URL:?Set trusted JWKS URL}
+      BAHAR_OIDC_CLIENT_ID: ${BAHAR_OIDC_CLIENT_ID:?Set public SPA client ID}
+      BAHAR_OIDC_AUTHORIZE_URL: ${BAHAR_OIDC_AUTHORIZE_URL:?Set authorization endpoint}
+      BAHAR_OIDC_TOKEN_URL: ${BAHAR_OIDC_TOKEN_URL:?Set token endpoint}
+      BAHAR_OIDC_REDIRECT_URI: ${BAHAR_OIDC_REDIRECT_URI:?Set public HTTPS redirect URI}
+      BAHAR_OIDC_MFA_ACR: ${BAHAR_OIDC_MFA_ACR:-}
+      BAHAR_TESSERACT_LANGUAGES: aze+eng+rus
+    command: ["sh", "-c", "alembic upgrade head && bahar provision-objects && bahar serve --host 0.0.0.0 --port 8088"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      clamav:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:58088:8088"
+    read_only: true
+    tmpfs:
+      - /tmp:size=512m,mode=1770
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    restart: unless-stopped
+
+volumes:
+  bahar-postgres:
+  bahar-wal:
+  bahar-clamav:

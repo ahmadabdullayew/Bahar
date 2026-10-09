@@ -1,0 +1,109 @@
+{
+  "assessment_id": "demo-cookie-unsafe-001",
+  "contract": {
+    "id": "demo-recipe-label-v1",
+    "version": "1.0.0",
+    "mode": "demonstration",
+    "assessment_types": [
+      "ingredient_extraction",
+      "formulation_consistency",
+      "regulatory_applicability",
+      "technical_readiness"
+    ],
+    "scope": {
+      "product_id": "cookie-001",
+      "formulation_id": "cookie-formula",
+      "formulation_version": "2.0.0",
+      "label_id": "cookie-label-az",
+      "label_version": "3.0.0",
+      "market": "AZ",
+      "evidence_scope": "declared formulation and digital artwork only"
+    },
+    "permitted_claims": [
+      "ingredient_extraction",
+      "formulation_consistency",
+      "regulatory_applicability",
+      "technical_readiness"
+    ],
+    "required_checks": [
+      "contract_validity",
+      "evidence_integrity",
+      "composition_resolution",
+      "rule_applicability",
+      "declaration_content",
+      "visual_presentation"
+    ]
+  },
+  "context": {
+    "jurisdiction": "AZ",
+    "assessment_mode": "prospective",
+    "relevant_times": {
+      "manufacture": "2027-02-01",
+      "label": "2027-01-15",
+      "market": "2027-02-05",
+      "assessment": "2026-10-09",
+      "knowledge": "2026-10-09"
+    },
+    "time_policy_id": "AZ-market-event-v1"
+  },
+  "formulation": {
+    "id": "cookie-formula",
+    "version": "2.0.0",
+    "ingredients": [
+      {
+        "id": "ing-wheat",
+        "name": "buğda unu",
+        "accepted_identity": "wheat flour",
+        "role": "intentional_ingredient",
+        "quantity": {"value": "500", "unit": "g"}
+      },
+      {
+        "id": "ing-milk",
+        "name": "süd",
+        "accepted_identity": "milk",
+        "role": "intentional_ingredient",
+        "quantity": {"value": "100", "unit": "ml"}
+      },
+      {
+        "id": "ing-tahini",
+        "name": "tahin",
+        "accepted_identity": "tahini",
+        "role": "intentional_ingredient",
+        "quantity": {"value": "35", "unit": "g"}
+      },
+      {
+        "id": "ing-lecithin",
+        "name": "E322",
+        "accepted_identity": "E322",
+        "role": "processing_aid",
+        "quantity": {"value": "2", "unit": "g"}
+      }
+    ],
+    "subrecipes": []
+  },
+  "label": {
+    "id": "cookie-label-az",
+    "version": "3.0.0",
+    "ingredient_text": "Tərkibi: buğda unu, süd, tahin, E322",
+    "declared_allergens": ["cereals_containing_gluten", "milk"]
+  },
+  "artwork": {
+    "id": "cookie-artwork-az",
+    "version": "3.0.0",
+    "visual_evidence_available": true,
+    "emphasized_allergens": ["cereals_containing_gluten", "milk"]
+  },
+  "rules": [],
+  "evidence": [],
+  "source_records": [
+    {"id": "recipe-record-cookie-v2", "version": "2.0.0", "digest": null, "integrity_status": "not_configured"},
+    {"id": "artwork-cookie-v3", "version": "3.0.0", "digest": null, "integrity_status": "not_configured"}
+  ],
+  "knowledge_base_version": "builtin-az-en-1.0.0",
+  "ai_execution": {
+    "mode": "deterministic_alias_normalization",
+    "model_id": null,
+    "prompt_id": null,
+    "schema_id": "ingredient-candidate-1.0.0"
+  }
+}

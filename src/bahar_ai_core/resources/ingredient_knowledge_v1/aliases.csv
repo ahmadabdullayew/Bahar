@@ -1,0 +1,325 @@
+alias_id,concept_id,alias,normalized,language
+ALS-4A67768B75C8C690,ING-EGG-WHITE,albumen,albumen,en
+ALS-8508C79F3F47E231,ING-ALMOND,Almond,almond,en
+ALS-C7EED58034B2D264,ING-ALMOND-MILK,Almond beverage,almond beverage,en
+ALS-B4D0F9517C03A765,ING-ALMOND-FLOUR,Almond flour,almond flour,en
+ALS-2F5544AC28A766D1,ING-ALMOND-MILK,almond milk,almond milk,en
+ALS-63A6719D504150D4,ING-ALMOND,almonds,almonds,en
+ALS-EDA879B5E855F5C2,ING-ANCHOVY,anchovies,anchovies,en
+ALS-01FB94A3C61C09C6,ING-ANCHOVY,Anchovy,anchovy,en
+ALS-35F041DA87C7EF46,ING-COD,atlantic cod,atlantic cod,en
+ALS-5EE033BACB1BB154,ING-SALMON,atlantic salmon,atlantic salmon,en
+ALS-2EE54004632B2D4E,ING-BARLEY,Barley,barley,en
+ALS-E73110094AC76996,ING-BARLEY-GLUCOSE-SYRUP,barley based glucose syrup,barley based glucose syrup,en
+ALS-137D264D2646C399,ING-BARLEY,barley flour,barley flour,en
+ALS-0B02E3FC98522EB7,ING-BARLEY-GLUCOSE-SYRUP,barley glucose syrup,barley glucose syrup,en
+ALS-FE3259AA5958046F,ING-BARLEY-MALT,Barley malt,barley malt,en
+ALS-DE48836DF8B10F00,ING-BARLEY-MALT,barley malt extract,barley malt extract,en
+ALS-04DD81CE1FA466CE,ING-BARLEY-GLUCOSE-SYRUP,Barley-derived glucose syrup,barley-derived glucose syrup,en
+ALS-271BDB3E82EC472C,ING-TOFU,bean curd,bean curd,en
+ALS-7267CFE03411C3A6,ING-BLACK-SESAME,Black sesame,black sesame,en
+ALS-83E896C005787329,ING-BLACK-SESAME,black sesame seeds,black sesame seeds,en
+ALS-C5A2BD1BD7F8DD37,ING-BRAZIL-NUT,Brazil nut,brazil nut,en
+ALS-E2B99DC3FBF32646,ING-BRAZIL-NUT,brazil nuts,brazil nuts,en
+ALS-DEFA65365A27870F,ING-RICE,brown rice,brown rice,en
+ALS-B983512A0D52748E,ING-BUCKWHEAT,Buckwheat,buckwheat,en
+ALS-9E0DD331ABBE9A95,ING-BUCKWHEAT,buckwheat flour,buckwheat flour,en
+ALS-676D1C9A50AC6219,ING-BUFFALO-MILK,Buffalo milk,buffalo milk,en
+ALS-53899E2894B8E47B,ING-BULGUR,bulgur,bulgur,en
+ALS-FD21C10A2532ABCE,ING-BULGUR,Bulgur wheat,bulgur wheat,en
+ALS-F6752DEEF7BCD574,ING-BUTTER,Butter,butter,en
+ALS-EBA23AFFCB139F78,ING-SQUID,calamari,calamari,en
+ALS-382A511B6F849F13,ING-CALCIUM-CASEINATE,Calcium caseinate,calcium caseinate,en
+ALS-841B14046083CA87,ING-CANE-SUGAR,Cane sugar,cane sugar,en
+ALS-FDA5C5456EC7A716,ING-CASEIN,Casein,casein,en
+ALS-825F88023D2089FD,ING-CASHEW,Cashew,cashew,en
+ALS-A17A1DCA4CB9EE4B,ING-CASHEW,cashews,cashews,en
+ALS-186234D27F8EE455,ING-TAPIOCA-STARCH,cassava starch,cassava starch,en
+ALS-F8AD6AA14FCC0394,ING-CELERIAC,Celeriac,celeriac,en
+ALS-55FFB4E4569FBCCB,ING-CELERY,Celery,celery,en
+ALS-80FCB74B7C548E2A,ING-CELERY-EXTRACT,Celery extract,celery extract,en
+ALS-C29B3CC1096A0F99,ING-CELERY-POWDER,Celery powder,celery powder,en
+ALS-7D70090F5CCDB310,ING-CELERIAC,celery root,celery root,en
+ALS-BE1FD844D2E63399,ING-CELERY-SEED,Celery seed,celery seed,en
+ALS-5BA0C566281C4CC1,ING-CELERY-SEED,celery seeds,celery seeds,en
+ALS-2DC25EC3EB36A13D,ING-CELERY,celery stalk,celery stalk,en
+ALS-B783B91B3FCB246A,ING-CHEESE,cheddar cheese,cheddar cheese,en
+ALS-63FB7B78147F98C7,ING-CHEESE,Cheese,cheese,en
+ALS-925DF3771F928895,ING-CHESTNUT,Chestnut,chestnut,en
+ALS-40EBDCBF663B961C,ING-CHESTNUT,chestnuts,chestnuts,en
+ALS-8363006145CE525C,ING-CHICKEN-EGG,Chicken egg,chicken egg,en
+ALS-4EBF70CE4A08C3D1,ING-CHICKPEA-FLOUR,Chickpea flour,chickpea flour,en
+ALS-E5DBD082112E17D4,ING-CLAM,Clam,clam,en
+ALS-04603E415A6571CD,ING-CLAM,clams,clams,en
+ALS-06973861E85E5274,ING-GHEE,clarified butter,clarified butter,en
+ALS-9478F558CB796C0E,ING-COCOA-POWDER,Cocoa powder,cocoa powder,en
+ALS-E2C49F2317F33F4E,ING-COCONUT,Coconut,coconut,en
+ALS-1EBEE5D61166B0AA,ING-COCONUT-CREAM,Coconut cream,coconut cream,en
+ALS-C4C4C28293C49E57,ING-COCONUT,coconut flesh,coconut flesh,en
+ALS-9F0FA3A98442FC60,ING-COCONUT-MILK,Coconut milk,coconut milk,en
+ALS-C980A96E5D9FFE25,ING-COD,Cod,cod,en
+ALS-11074C092972C8AA,ING-WHEAT,common wheat,common wheat,en
+ALS-9D12E697A0231624,ING-CORN-FLOUR,Corn flour,corn flour,en
+ALS-D0BE69AFE2C4BE1F,ING-CORNSTARCH,Corn starch,corn starch,en
+ALS-4B0798B0E17206FC,ING-CORNSTARCH,cornstarch,cornstarch,en
+ALS-26164C6A41DB94FB,ING-COW-MILK,Cow milk,cow milk,en
+ALS-5D89CFE09AFC7D1C,ING-COW-MILK,cow's milk,cow's milk,en
+ALS-018F5A7E9E6ECB8E,ING-CRAB,Crab,crab,en
+ALS-CC27A8E544B93F41,ING-CRAB,crab meat,crab meat,en
+ALS-CA5EF18D88F372AA,ING-CRAYFISH,crawfish,crawfish,en
+ALS-E4B96DD8C3C9663A,ING-CRAYFISH,Crayfish,crayfish,en
+ALS-1FAC86EBB68D393A,ING-CUTTLEFISH,Cuttlefish,cuttlefish,en
+ALS-5E0F10BD5ABB42AD,ING-DEFATTED-PEANUT-FLOUR,Defatted peanut flour,defatted peanut flour,en
+ALS-C46C17484943F17B,ING-DIJON-MUSTARD,Dijon mustard,dijon mustard,en
+ALS-336FA27BE7D2C0C4,ING-EGG-POWDER,dried egg,dried egg,en
+ALS-C48A6D3B5BD58059,ING-WATER,drinking water,drinking water,en
+ALS-31A2FB7FCDD8AEE5,ING-MILK-POWDER,dry milk,dry milk,en
+ALS-9AE8AF0BBB065854,ING-ROASTED-PEANUT,dry roasted peanut,dry roasted peanut,en
+ALS-7DC57A81D2BF90B8,ING-DUCK-EGG,Duck egg,duck egg,en
+ALS-8FF3896C3D6C5519,ING-DUCK-EGG,duck eggs,duck eggs,en
+ALS-C6E9ECFD634DD1FE,ING-DURUM,durum,durum,en
+ALS-CA0D9B68F439DF95,ING-DURUM,Durum wheat,durum wheat,en
+ALS-F18414DF290EA69B,ING-EGG-LYSOZYME-UNKNOWN,e1105,e1105,en
+ALS-80B72C3F96A17E84,ING-SULFUR-DIOXIDE,e220,e220,en
+ALS-E7B37ED260F0A8F5,ING-SODIUM-SULFITE,e221,e221,en
+ALS-F7C38F28BB455439,ING-SODIUM-BISULFITE,e222,e222,en
+ALS-9B518C126A2361EC,ING-SODIUM-METABISULFITE,e223,e223,en
+ALS-935ACDD029879F06,ING-POTASSIUM-METABISULFITE,e224,e224,en
+ALS-6F094E8EB12C000F,ING-POTASSIUM-BISULFITE,e228,e228,en
+ALS-AC0BCD3F6E80E06F,ING-LECITHIN-UNKNOWN,e322,e322,en
+ALS-C56C4671C08A556C,ING-EDAMAME,Edamame,edamame,en
+ALS-DF7D3560EE149FD0,ING-SNAIL,Edible snail,edible snail,en
+ALS-7F3BE33BA33EB497,ING-CHICKEN-EGG,egg,egg,en
+ALS-B61D517F38ED7E89,ING-EGG-WHITE,egg albumen,egg albumen,en
+ALS-A8012DBCE7C23120,ING-OVALBUMIN,egg ovalbumin,egg ovalbumin,en
+ALS-4F7311EC6E5F54B7,ING-EGG-POWDER,Egg powder,egg powder,en
+ALS-66126C763A45D268,ING-EGG-PROTEIN,Egg protein,egg protein,en
+ALS-8E65DCFFDF119453,ING-EGG-PROTEIN,egg protein concentrate,egg protein concentrate,en
+ALS-10EF086004D75B69,ING-EGG-WHITE,Egg white,egg white,en
+ALS-D1F251D81D7F1DEA,ING-EGG-YOLK,Egg yolk,egg yolk,en
+ALS-DA6B1F70DC27C724,ING-CHICKEN-EGG,eggs,eggs,en
+ALS-9049256D5B8C7090,ING-SNAIL,escargot,escargot,en
+ALS-1798AE148A014C41,ING-SHEEP-MILK,ewe milk,ewe milk,en
+ALS-C71DD50D851B51E7,ING-OLIVE-OIL,extra virgin olive oil,extra virgin olive oil,en
+ALS-769F79B716F18B57,ING-FISH-SAUCE,fermented fish sauce,fermented fish sauce,en
+ALS-34F8AAD14D8B63F4,ING-FISH-GELATIN,Fish gelatin,fish gelatin,en
+ALS-5F486E47190E5B53,ING-FISH-GELATIN,fish gelatine,fish gelatine,en
+ALS-AF16377B0377B422,ING-FISH-OIL,Fish oil,fish oil,en
+ALS-96067C0E3D486C23,ING-FISH-SAUCE,Fish sauce,fish sauce,en
+ALS-13952EA8BE3C5380,ING-FLAXSEED,Flaxseed,flaxseed,en
+ALS-7269E2672CFC9F51,ING-REFINED-SOYBEAN-OIL,fully refined soy oil,fully refined soy oil,en
+ALS-217BB3BB5958763D,ING-REFINED-SOYBEAN-OIL,Fully refined soybean oil,fully refined soybean oil,en
+ALS-393DC19441E2B148,ING-GHEE,Ghee,ghee,en
+ALS-EC141C4BC9ABC24F,ING-GOAT-MILK,Goat milk,goat milk,en
+ALS-D801FE79187517B9,ING-GOAT-MILK,goat's milk,goat's milk,en
+ALS-99A3FE1640A023BF,ING-CHICKPEA-FLOUR,gram flour,gram flour,en
+ALS-A025B5EB4556B548,ING-CANE-SUGAR,granulated sugar,granulated sugar,en
+ALS-96A988B01FF58EC7,ING-EDAMAME,green soybeans,green soybeans,en
+ALS-82176EFA3EE27C4F,ING-ALMOND-FLOUR,ground almonds,ground almonds,en
+ALS-D1245DC4B08C6622,ING-MUSTARD-POWDER,ground mustard,ground mustard,en
+ALS-A9203B34FE160E91,ING-PEANUT,groundnut,groundnut,en
+ALS-9FAA17D07F7E9D97,ING-PEANUT-BUTTER,groundnut butter,groundnut butter,en
+ALS-01D0C8CF161DA449,ING-PEANUT-OIL,groundnut oil,groundnut oil,en
+ALS-38A4E68EDC0D7A3F,ING-PEANUT,groundnuts,groundnuts,en
+ALS-0EB7A2D865065BA6,ING-HAZELNUT,Hazelnut,hazelnut,en
+ALS-7A1BECF0C6E8882D,ING-HAZELNUT-PASTE,Hazelnut paste,hazelnut paste,en
+ALS-033447E19D8BC4AA,ING-HAZELNUT,hazelnuts,hazelnuts,en
+ALS-569AFE3D4E44D535,ING-CHICKEN-EGG,hen egg,hen egg,en
+ALS-A459FE569801E0E2,ING-HYDROLYZED-VEGETABLE-PROTEIN,hvp,hvp,en
+ALS-31D3834815066037,ING-HYDROLYZED-VEGETABLE-PROTEIN,Hydrolyzed vegetable protein,hydrolyzed vegetable protein,en
+ALS-10D807128C8FC435,ING-ISINGLASS,Isinglass,isinglass,en
+ALS-8A55974EF492D344,ING-KRILL,Krill,krill,en
+ALS-94A99FBABCC404B9,ING-KRILL,krill oil,krill oil,en
+ALS-B39407B1ECD97434,ING-LACTOSE,Lactose,lactose,en
+ALS-F450E170F4E3C302,ING-LECITHIN-UNKNOWN,lecithin,lecithin,en
+ALS-707AD101B4D841FA,ING-LECITHIN-UNKNOWN,Lecithin (unspecified source),lecithin (unspecified source),en
+ALS-017B7C5EA44F14ED,ING-LECITHIN-UNKNOWN,lecithin e322,lecithin e322,en
+ALS-C942931117C6FF90,ING-LENTIL,Lentil,lentil,en
+ALS-B2EA6A9CA02ADB2C,ING-LENTIL,lentils,lentils,en
+ALS-5CAC482D0D3732D2,ING-FLAXSEED,linseed,linseed,en
+ALS-C1C7A03AB58C5FD0,ING-LOBSTER,Lobster,lobster,en
+ALS-1520C88096C4AEE0,ING-LOBSTER,lobster meat,lobster meat,en
+ALS-D394A03014FEA385,ING-LUPIN,Lupin,lupin,en
+ALS-4E3A6C640F1946B6,ING-LUPIN-FLOUR,Lupin flour,lupin flour,en
+ALS-41A5576F507F5DEF,ING-LUPIN-PROTEIN,Lupin protein,lupin protein,en
+ALS-87DB2F564FC04A17,ING-LUPIN-PROTEIN,lupin protein isolate,lupin protein isolate,en
+ALS-5CA0011EED0FF4F7,ING-LUPIN,lupine,lupine,en
+ALS-A59AD73287FE53CF,ING-LUPIN-FLOUR,lupine flour,lupine flour,en
+ALS-985C3590612FD75A,ING-LUPIN,lupini beans,lupini beans,en
+ALS-7560A163BA8FB327,ING-EGG-LYSOZYME-UNKNOWN,lysozyme,lysozyme,en
+ALS-C01848BCA0F0270A,ING-EGG-LYSOZYME-UNKNOWN,Lysozyme (unspecified source),lysozyme (unspecified source),en
+ALS-9A0AC377BFC86E6C,ING-MACADAMIA,Macadamia,macadamia,en
+ALS-3AAEEF657F5425E6,ING-MACADAMIA,macadamia nuts,macadamia nuts,en
+ALS-E55B073A5218138C,ING-CORN-FLOUR,maize flour,maize flour,en
+ALS-BB7C5B1F087EFE0E,ING-CORNSTARCH,maize starch,maize starch,en
+ALS-85691996DA834ED6,ING-CASEIN,milk casein,milk casein,en
+ALS-C18C183BE38C3CBE,ING-LACTOSE,milk lactose,milk lactose,en
+ALS-2B5AE400CEAF1056,ING-MILK-POWDER,Milk powder,milk powder,en
+ALS-3785DC05AFFC32C4,ING-SPICE-MIX,mixed spices,mixed spices,en
+ALS-CDC8E32BEDDEC5C3,ING-MIXED-VEGETABLE-OIL,Mixed vegetable oil,mixed vegetable oil,en
+ALS-8D57C698C1217301,ING-MODIFIED-STARCH,modified food starch,modified food starch,en
+ALS-A00C850562439B64,ING-MODIFIED-STARCH,Modified starch,modified starch,en
+ALS-89E7868C0504BAC5,ING-CHEESE,mozzarella cheese,mozzarella cheese,en
+ALS-0C52C36E2CEEC017,ING-MUSSEL,Mussel,mussel,en
+ALS-AEA2A95E96DF472B,ING-MUSSEL,mussels,mussels,en
+ALS-C74018A771498ED2,ING-MUSTARD-FLOUR,Mustard flour,mustard flour,en
+ALS-FCA2B968DCF27673,ING-MUSTARD-POWDER,Mustard powder,mustard powder,en
+ALS-13B9563928495107,ING-MUSTARD-SEED,Mustard seed,mustard seed,en
+ALS-08338E8DD61C630C,ING-MUSTARD-OIL,Mustard seed oil,mustard seed oil,en
+ALS-2273CDC3AAD3328F,ING-MUSTARD-SEED,mustard seeds,mustard seeds,en
+ALS-1F8F8B6C7EE42455,ING-NATURAL-FLAVORING,Natural flavoring,natural flavoring,en
+ALS-C6D2F9EEB886308A,ING-NATURAL-FLAVORING,natural flavouring,natural flavouring,en
+ALS-03E2E6B085DA4F72,ING-SKIM-MILK-POWDER,nonfat dry milk,nonfat dry milk,en
+ALS-F6AB910BD4707EFE,ING-OAT,Oat,oat,en
+ALS-E1824FB4400150A7,ING-OAT-MILK,Oat beverage,oat beverage,en
+ALS-EF06F14AD2C79A4D,ING-OAT-FLOUR,Oat flour,oat flour,en
+ALS-AD90BE7497B6BC3C,ING-OAT-MILK,oat milk,oat milk,en
+ALS-362C4A18F1CDA07D,ING-OAT,oats,oats,en
+ALS-0F901540A2A0EB0D,ING-OCTOPUS,Octopus,octopus,en
+ALS-E2FCC9F98D808BA5,ING-OLIVE-OIL,Olive oil,olive oil,en
+ALS-BCF10D7B8F8710D3,ING-OVALBUMIN,Ovalbumin,ovalbumin,en
+ALS-4B26CEBEF6EF715E,ING-OYSTER,Oyster,oyster,en
+ALS-21DF1DFF31411FA4,ING-OYSTER,oysters,oysters,en
+ALS-88967C42EA7B4AA2,ING-PALM-OIL,Palm oil,palm oil,en
+ALS-7D074950743E6303,ING-PEANUT,Peanut,peanut,en
+ALS-A4DFB78E3D7376AE,ING-PEANUT-BUTTER,Peanut butter,peanut butter,en
+ALS-15CA552455C1A3DE,ING-PEANUT-FLOUR,Peanut flour,peanut flour,en
+ALS-1B52B638A63FE890,ING-PEANUT-OIL,Peanut oil,peanut oil,en
+ALS-D257BA5DDF308CBF,ING-PEANUT-PASTE,Peanut paste,peanut paste,en
+ALS-8A84B54891E6A432,ING-PEANUT-PROTEIN,Peanut protein,peanut protein,en
+ALS-E8C0FC9E7DFA833A,ING-PEANUT-PROTEIN,peanut protein isolate,peanut protein isolate,en
+ALS-95EBA791D986E233,ING-PEANUT,peanuts,peanuts,en
+ALS-8352C0C0712B7E6D,ING-PECAN,Pecan,pecan,en
+ALS-1D3CC233C8481A20,ING-PECAN,pecans,pecans,en
+ALS-0599CA5E6B680B81,ING-PINE-NUT,Pine nut,pine nut,en
+ALS-167BAEAB6DEBE01B,ING-PINE-NUT,pine nuts,pine nuts,en
+ALS-EB36B16D2C277200,ING-PISTACHIO,Pistachio,pistachio,en
+ALS-E00E77502D1B7A15,ING-PISTACHIO,pistachios,pistachios,en
+ALS-ABD42B1141CA7EDC,ING-WHEAT-FLOUR,plain wheat flour,plain wheat flour,en
+ALS-6BB93BBC849D41D9,ING-YOGURT,plain yogurt,plain yogurt,en
+ALS-6CCA6B7BDA6EA49D,ING-PLANT-PROTEIN,Plant protein,plant protein,en
+ALS-1DD28D2606DC2478,ING-PLANT-BASED-CHEESE,Plant-based cheese,plant-based cheese,en
+ALS-BE01FC1F22CDA720,ING-POTASSIUM-BISULFITE,Potassium bisulfite,potassium bisulfite,en
+ALS-C2AC8405DAFBC871,ING-POTASSIUM-BISULFITE,potassium bisulphite,potassium bisulphite,en
+ALS-5E38579079856BE1,ING-POTASSIUM-METABISULFITE,Potassium metabisulfite,potassium metabisulfite,en
+ALS-8AA6931F29A60650,ING-POTASSIUM-METABISULFITE,potassium metabisulphite,potassium metabisulphite,en
+ALS-64624533C778DE6B,ING-POTATO-STARCH,Potato starch,potato starch,en
+ALS-798565C0000B73AF,ING-MILK-POWDER,powdered milk,powdered milk,en
+ALS-D09AFE7A5822EEE7,ING-PRAWN,Prawn,prawn,en
+ALS-087A7CC07DA503B7,ING-PRAWN,prawns,prawns,en
+ALS-76749BFC4D37C7B1,ING-PREPARED-MUSTARD,Prepared mustard,prepared mustard,en
+ALS-EE62A0D1AE76D504,ING-QUAIL-EGG,Quail egg,quail egg,en
+ALS-43B24E80972B622C,ING-QUAIL-EGG,quail eggs,quail eggs,en
+ALS-F4B97A20C0FBF1F9,ING-MACADAMIA,queensland nut,queensland nut,en
+ALS-3320D3DA9A8D0547,ING-QUINOA,Quinoa,quinoa,en
+ALS-2D49DC72FB89FE43,ING-RICE,Rice,rice,en
+ALS-0802C453C6286674,ING-RICE-FLOUR,Rice flour,rice flour,en
+ALS-03D620E722572D7F,ING-ROASTED-PEANUT,Roasted peanut,roasted peanut,en
+ALS-5D2AE2FE0ED9EF4C,ING-ROASTED-PEANUT,roasted peanuts,roasted peanuts,en
+ALS-A5C521B7BD89ABD9,ING-RYE,Rye,rye,en
+ALS-1F6D0BCB8DB52EBF,ING-RYE,rye flour,rye flour,en
+ALS-D2B771502271E545,ING-SALMON,Salmon,salmon,en
+ALS-4C0E5DA0D71B06D6,ING-FISH-OIL,salmon oil,salmon oil,en
+ALS-A2DDAE827C5B79C0,ING-SALT,Salt,salt,en
+ALS-BFEC11FD3D74F313,ING-BUTTER,salted butter,salted butter,en
+ALS-EFC6AFD5AABD69F3,ING-SARDINE,Sardine,sardine,en
+ALS-B7D4D2C078054248,ING-SARDINE,sardines,sardines,en
+ALS-887BF76139ED25A4,ING-SCALLOP,Scallop,scallop,en
+ALS-FDA5EE9C3D592914,ING-SCALLOP,scallops,scallops,en
+ALS-ABD22D8E264CA71B,ING-SESAME-SEED,sesame,sesame,en
+ALS-878599380FEB5970,ING-SESAME-BUTTER,Sesame butter,sesame butter,en
+ALS-0BEF1DC7BF170F7A,ING-SESAME-CAKE,sesame cake,sesame cake,en
+ALS-6A598B631AEFA82E,ING-SESAME-FLOUR,Sesame flour,sesame flour,en
+ALS-722F95D95052A363,ING-SESAME-OIL,Sesame oil,sesame oil,en
+ALS-D293531547538523,ING-TAHINI,sesame paste,sesame paste,en
+ALS-EC2A65048E11264B,ING-SESAME-CAKE,Sesame press cake,sesame press cake,en
+ALS-408F131C6B0DD2FB,ING-SESAME-PROTEIN,Sesame protein,sesame protein,en
+ALS-595EA38EEDB59113,ING-SESAME-PROTEIN,sesame protein concentrate,sesame protein concentrate,en
+ALS-3F7D0D81A95DBC26,ING-SESAME-SEED,Sesame seed,sesame seed,en
+ALS-1225C2D8A9C8CFDD,ING-SESAME-SEED,sesame seeds,sesame seeds,en
+ALS-5F761F52DE0D322E,ING-SHEEP-MILK,Sheep milk,sheep milk,en
+ALS-3F1A5B444646CD01,ING-SOY-SAUCE,shoyu,shoyu,en
+ALS-A877A8F078CB6099,ING-SHRIMP,Shrimp,shrimp,en
+ALS-C8E81C5931FC335C,ING-SHRIMP-PASTE,Shrimp paste,shrimp paste,en
+ALS-0AB5424B68848BAA,ING-SHRIMP,shrimps,shrimps,en
+ALS-6537EF746B403532,ING-SKIM-MILK-POWDER,Skim milk powder,skim milk powder,en
+ALS-7A3400F06F7A01F9,ING-TUNA,skipjack tuna,skipjack tuna,en
+ALS-60ED058190526C25,ING-SODIUM-BISULFITE,Sodium bisulfite,sodium bisulfite,en
+ALS-BD7F959753646B4F,ING-SODIUM-BISULFITE,sodium bisulphite,sodium bisulphite,en
+ALS-1266170011784D2B,ING-SODIUM-CASEINATE,Sodium caseinate,sodium caseinate,en
+ALS-1FDAB8EBC00F1E80,ING-SALT,sodium chloride,sodium chloride,en
+ALS-3FD70FA18371EEE5,ING-SODIUM-METABISULFITE,Sodium metabisulfite,sodium metabisulfite,en
+ALS-7365CB6D7A4BDAD7,ING-SODIUM-METABISULFITE,sodium metabisulphite,sodium metabisulphite,en
+ALS-CD3C84E412F87050,ING-SODIUM-SULFITE,Sodium sulfite,sodium sulfite,en
+ALS-6E963AD410B4BD6F,ING-SODIUM-SULFITE,sodium sulphite,sodium sulphite,en
+ALS-5F1D07326F54F9BE,ING-SOY-MILK,soy beverage,soy beverage,en
+ALS-953FF0806ACC3485,ING-SOY-FLOUR,Soy flour,soy flour,en
+ALS-934594A7B42872FF,ING-SOY-LECITHIN,Soy lecithin,soy lecithin,en
+ALS-801DB721FF03A308,ING-SOY-MILK,Soy milk,soy milk,en
+ALS-6D54E6BD1230A822,ING-SOY-MISO,Soy miso,soy miso,en
+ALS-9BF6A2583D6EB5DB,ING-SOY-PROTEIN,Soy protein,soy protein,en
+ALS-801414FD5C53EA03,ING-SOY-PROTEIN,soy protein concentrate,soy protein concentrate,en
+ALS-B817B47215267B5B,ING-SOY-PROTEIN,soy protein isolate,soy protein isolate,en
+ALS-9B39F12913DC7F4B,ING-SOY-SAUCE,Soy sauce,soy sauce,en
+ALS-7370734B7EF25CA7,ING-TEMPEH,soy tempeh,soy tempeh,en
+ALS-90FC41F1252DAB7A,ING-SOYBEAN,soya beans,soya beans,en
+ALS-931A4C1D3CFD3631,ING-SOY-FLOUR,soya flour,soya flour,en
+ALS-6A63E776A141E80F,ING-SOY-LECITHIN,soya lecithin,soya lecithin,en
+ALS-C64310C3F5EDFFB2,ING-SOY-MILK,soya milk,soya milk,en
+ALS-1FEDD1975492BE5C,ING-SOYBEAN-OIL,soya oil,soya oil,en
+ALS-842B346CACA19416,ING-SOYBEAN,Soybean,soybean,en
+ALS-B6ADDC12691C0664,ING-SOY-MISO,soybean miso,soybean miso,en
+ALS-C2CEB08E3BB8E4FD,ING-SOYBEAN-OIL,Soybean oil,soybean oil,en
+ALS-3C43BCB5DA49B309,ING-SOYBEAN,soybeans,soybeans,en
+ALS-FD164AD1074333FB,ING-SPELT,Spelt,spelt,en
+ALS-3B938CDAC6EBA03F,ING-SPELT,spelt flour,spelt flour,en
+ALS-CDF9501FDD823380,ING-SPICE-MIX,Spice mix,spice mix,en
+ALS-C160BF625D43F43B,ING-SQUID,Squid,squid,en
+ALS-EE359626F7EDFE1A,ING-SULFUR-DIOXIDE,Sulfur dioxide,sulfur dioxide,en
+ALS-E90DC7A0EBA50B7F,ING-SULFUR-DIOXIDE,sulphur dioxide,sulphur dioxide,en
+ALS-A32870EC2DB8A31A,ING-SUNFLOWER-LECITHIN,Sunflower lecithin,sunflower lecithin,en
+ALS-1BE55040960B7FE8,ING-SUNFLOWER-OIL,Sunflower oil,sunflower oil,en
+ALS-7901CCB1952F1E25,ING-SUNFLOWER-SEED,Sunflower seed,sunflower seed,en
+ALS-201F8EB573DCFB16,ING-SUNFLOWER-SEED,sunflower seeds,sunflower seeds,en
+ALS-A2E9CD80B80DACE0,ING-WHEY,sweet whey,sweet whey,en
+ALS-5F21315F37871BDE,ING-SALT,table salt,table salt,en
+ALS-82A386AB2C6DB43C,ING-TAHINI,Tahini,tahini,en
+ALS-1E065257A245F843,ING-TAPIOCA-STARCH,Tapioca starch,tapioca starch,en
+ALS-24A7D344ACE9A1A9,ING-TEMPEH,Tempeh,tempeh,en
+ALS-1DFCB22CDE908189,ING-TOASTED-SESAME,Toasted sesame,toasted sesame,en
+ALS-A7A6CEAD1B032B6C,ING-TOASTED-SESAME,toasted sesame seeds,toasted sesame seeds,en
+ALS-C634AF2ADD58CE12,ING-TOFU,Tofu,tofu,en
+ALS-0B8DEBA71C7E9F9F,ING-TUNA,Tuna,tuna,en
+ALS-9DF580F85ADCA0BB,ING-BUTTER,unsalted butter,unsalted butter,en
+ALS-F70536EB67EF5F98,ING-COCOA-POWDER,unsweetened cocoa powder,unsweetened cocoa powder,en
+ALS-D299B64C10DAA947,ING-PLANT-BASED-CHEESE,vegan cheese,vegan cheese,en
+ALS-EA5C54F84E575E7E,ING-MIXED-VEGETABLE-OIL,vegetable oil,vegetable oil,en
+ALS-32FECF07ED439798,ING-PLANT-PROTEIN,vegetable protein,vegetable protein,en
+ALS-9F3801E4E2BCAD24,ING-VITAL-WHEAT-GLUTEN,Vital wheat gluten,vital wheat gluten,en
+ALS-FA504F2F1656A2CA,ING-WALNUT,Walnut,walnut,en
+ALS-48924EF2C8ED7B5B,ING-WALNUT,walnuts,walnuts,en
+ALS-CAB42A1D1EF86854,ING-WATER,Water,water,en
+ALS-44EEEFCA5A026E7B,ING-BUFFALO-MILK,water buffalo milk,water buffalo milk,en
+ALS-9C54C6C93F290E86,ING-WHEAT,Wheat,wheat,en
+ALS-2917F4F6D9A46F82,ING-WHEAT-GLUCOSE-SYRUP,wheat based glucose syrup,wheat based glucose syrup,en
+ALS-5EA920E8E34EB6FD,ING-COUSCOUS-WHEAT,Wheat couscous,wheat couscous,en
+ALS-A516CBD4E52F68AB,ING-WHEAT-FLOUR,Wheat flour,wheat flour,en
+ALS-A0FA0D278028ED74,ING-WHEAT-GLUCOSE-SYRUP,wheat glucose syrup,wheat glucose syrup,en
+ALS-AC5415C2E6A431F8,ING-VITAL-WHEAT-GLUTEN,wheat gluten,wheat gluten,en
+ALS-BB84B00B81AD6D2E,ING-SEMOLINA,Wheat semolina,wheat semolina,en
+ALS-CD7C2FBB99A69DFB,ING-WHEAT-STARCH,Wheat starch,wheat starch,en
+ALS-B9CDAD887AE5C854,ING-WHEAT-GLUCOSE-SYRUP,Wheat-derived glucose syrup,wheat-derived glucose syrup,en
+ALS-387B157BD29438E8,ING-WHEY,Whey,whey,en
+ALS-86B0B233F73DA2E1,ING-WHEY-PROTEIN,Whey protein,whey protein,en
+ALS-EF53CCB02AE63232,ING-WHEY-PROTEIN,whey protein concentrate,whey protein concentrate,en
+ALS-74E7D5C4A70A50E8,ING-WHEY-PROTEIN,whey protein isolate,whey protein isolate,en
+ALS-A44D864E004AD821,ING-RICE,white rice,white rice,en
+ALS-E0589653F46C34E2,ING-CANE-SUGAR,white sugar,white sugar,en
+ALS-61ECF0606CCD754F,ING-COW-MILK,whole cow milk,whole cow milk,en
+ALS-4E8DEF7F7F7ADD8E,ING-EGG-POWDER,whole egg powder,whole egg powder,en
+ALS-738E1BB0FDCDBB17,ING-WHOLE-WHEAT-FLOUR,Whole wheat flour,whole wheat flour,en
+ALS-C30EEE1E6713CFD1,ING-WHOLE-WHEAT-FLOUR,wholemeal wheat flour,wholemeal wheat flour,en
+ALS-68C33C53C390E7A6,ING-PREPARED-MUSTARD,yellow mustard,yellow mustard,en
+ALS-D94DE45521050173,ING-YOGURT,yoghurt,yoghurt,en
+ALS-22E64D082355052D,ING-YOGURT,Yogurt,yogurt,en
+ALS-2DEA092F4FBE648E,ING-EGG-YOLK,yolk powder,yolk powder,en
